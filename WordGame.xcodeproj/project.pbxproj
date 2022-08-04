@@ -21,6 +21,8 @@
 		A99FA7482898552700103ADD /* WordPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99FA7472898552700103ADD /* WordPair.swift */; };
 		A99FA74E289995B400103ADD /* WordGameConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99FA74D289995B400103ADD /* WordGameConstant.swift */; };
 		A99FA754289996AE00103ADD /* words.json in Resources */ = {isa = PBXBuildFile; fileRef = A99FA753289996AE00103ADD /* words.json */; };
+		A99FA75728999D3400103ADD /* GameRoundData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99FA75628999D3400103ADD /* GameRoundData.swift */; };
+		A99FA7592899A75500103ADD /* GameContentGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99FA7582899A75400103ADD /* GameContentGenerator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,8 @@
 		A99FA7472898552700103ADD /* WordPair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordPair.swift; sourceTree = "<group>"; };
 		A99FA74D289995B400103ADD /* WordGameConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordGameConstant.swift; sourceTree = "<group>"; };
 		A99FA753289996AE00103ADD /* words.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = words.json; sourceTree = "<group>"; };
+		A99FA75628999D3400103ADD /* GameRoundData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRoundData.swift; sourceTree = "<group>"; };
+		A99FA7582899A75400103ADD /* GameContentGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameContentGenerator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				A99FA7472898552700103ADD /* WordPair.swift */,
+				A99FA75628999D3400103ADD /* GameRoundData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -170,6 +175,7 @@
 			children = (
 				A99FA743289853CA00103ADD /* FileReader.swift */,
 				A99FA745289853D900103ADD /* DataParser.swift */,
+				A99FA7582899A75400103ADD /* GameContentGenerator.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -313,12 +319,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A99FA75728999D3400103ADD /* GameRoundData.swift in Sources */,
 				A99FA7422898536800103ADD /* GameViewModel.swift in Sources */,
 				A99FA74E289995B400103ADD /* WordGameConstant.swift in Sources */,
 				A99FA744289853CA00103ADD /* FileReader.swift in Sources */,
 				A99FA746289853D900103ADD /* DataParser.swift in Sources */,
 				A9030C9D2895348900E5E40D /* GameViewController.swift in Sources */,
 				A9030C992895348900E5E40D /* AppDelegate.swift in Sources */,
+				A99FA7592899A75500103ADD /* GameContentGenerator.swift in Sources */,
 				A9030C9B2895348900E5E40D /* SceneDelegate.swift in Sources */,
 				A99FA7482898552700103ADD /* WordPair.swift in Sources */,
 			);
