@@ -15,6 +15,7 @@ final class GameViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         view.backgroundColor = .white
+        gameViewModel?.delegate = self
         gameViewModel?.getFileData()
     }
 
@@ -29,3 +30,17 @@ final class GameViewController: UIViewController {
     
 }
 
+// MARK: - GameViewModel Delagate
+extension GameViewController: GameViewModelDelegate {
+    func showError(with message: String) {
+        
+    }
+    
+    func displayNextWord(with currentWord: GameRoundData) {
+        print(currentWord)
+    }
+    
+    func displayResult(gameScore: GameScore) {
+    
+    }
+}

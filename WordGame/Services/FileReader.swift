@@ -11,13 +11,6 @@ protocol FileReaderProtocol {
     func fetchDataFromFile<T: Codable>(with fileName: String, completionHandler: @escaping ((Result<T, WordGameError>) -> Void))
 }
 
-enum WordGameError: Error {
-    case unableToReadFile
-    case corruptData
-    case decodingFail
-    case other(message: String)
-}
-
 struct FileReader: FileReaderProtocol {
     
     private let dataParser: DataParserProtocol
