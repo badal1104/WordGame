@@ -23,6 +23,9 @@
 		A99FA754289996AE00103ADD /* words.json in Resources */ = {isa = PBXBuildFile; fileRef = A99FA753289996AE00103ADD /* words.json */; };
 		A99FA75728999D3400103ADD /* GameRoundData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99FA75628999D3400103ADD /* GameRoundData.swift */; };
 		A99FA7592899A75500103ADD /* GameContentGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99FA7582899A75400103ADD /* GameContentGenerator.swift */; };
+		A9FDDB19289C4BEC00E17D7F /* GameScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FDDB18289C4BEC00E17D7F /* GameScore.swift */; };
+		A9FDDB1B289C4C1600E17D7F /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FDDB1A289C4C1600E17D7F /* GameManager.swift */; };
+		A9FDDB1E289C54A800E17D7F /* WordGameError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FDDB1D289C54A800E17D7F /* WordGameError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +66,9 @@
 		A99FA753289996AE00103ADD /* words.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = words.json; sourceTree = "<group>"; };
 		A99FA75628999D3400103ADD /* GameRoundData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRoundData.swift; sourceTree = "<group>"; };
 		A99FA7582899A75400103ADD /* GameContentGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameContentGenerator.swift; sourceTree = "<group>"; };
+		A9FDDB18289C4BEC00E17D7F /* GameScore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScore.swift; sourceTree = "<group>"; };
+		A9FDDB1A289C4C1600E17D7F /* GameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameManager.swift; sourceTree = "<group>"; };
+		A9FDDB1D289C54A800E17D7F /* WordGameError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordGameError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +122,8 @@
 				A9030C982895348900E5E40D /* AppDelegate.swift */,
 				A9030C9A2895348900E5E40D /* SceneDelegate.swift */,
 				A99FA74D289995B400103ADD /* WordGameConstant.swift */,
+				A9FDDB1D289C54A800E17D7F /* WordGameError.swift */,
+				A9FDDB1C289C4C2600E17D7F /* Helper */,
 				A99FA74F289995C700103ADD /* ViewController */,
 				A99FA750289995D800103ADD /* ViewModel */,
 				A99FA7522899962600103ADD /* Services */,
@@ -166,6 +174,7 @@
 			children = (
 				A99FA7472898552700103ADD /* WordPair.swift */,
 				A99FA75628999D3400103ADD /* GameRoundData.swift */,
+				A9FDDB18289C4BEC00E17D7F /* GameScore.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -186,6 +195,14 @@
 				A99FA753289996AE00103ADD /* words.json */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		A9FDDB1C289C4C2600E17D7F /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				A9FDDB1A289C4C1600E17D7F /* GameManager.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -320,6 +337,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A99FA75728999D3400103ADD /* GameRoundData.swift in Sources */,
+				A9FDDB1E289C54A800E17D7F /* WordGameError.swift in Sources */,
+				A9FDDB1B289C4C1600E17D7F /* GameManager.swift in Sources */,
+				A9FDDB19289C4BEC00E17D7F /* GameScore.swift in Sources */,
 				A99FA7422898536800103ADD /* GameViewModel.swift in Sources */,
 				A99FA74E289995B400103ADD /* WordGameConstant.swift in Sources */,
 				A99FA744289853CA00103ADD /* FileReader.swift in Sources */,
