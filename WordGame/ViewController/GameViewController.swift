@@ -78,9 +78,9 @@ extension GameViewController {
     
     private func addHeaderLabelConstraint() {
         NSLayoutConstraint.activate([
-            headerLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 12),
-            headerLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 8),
-            headerLabel.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -8)
+            headerLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: GameViewConstant.mediumPadding),
+            headerLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: GameViewConstant.padding),
+            headerLabel.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -GameViewConstant.padding)
         ])
     }
     
@@ -93,9 +93,9 @@ extension GameViewController {
     
     private func addEnglishLabelConstraint() {
         NSLayoutConstraint.activate([
-            englishWordLabel.topAnchor.constraint(equalTo: headerLabel.bottomAnchor, constant: 24),
-            englishWordLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 8),
-            englishWordLabel.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -8),
+            englishWordLabel.topAnchor.constraint(equalTo: headerLabel.bottomAnchor, constant: GameViewConstant.largePadding),
+            englishWordLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: GameViewConstant.padding),
+            englishWordLabel.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -GameViewConstant.padding),
         ])
     }
     
@@ -109,12 +109,12 @@ extension GameViewController {
     }
     
     private func addSpanishLabelConstraint() {
-        spanishWordLabelTopConstraint = spanishWordLabel.topAnchor.constraint(equalTo: englishWordLabel.bottomAnchor, constant: 12)
+        spanishWordLabelTopConstraint = spanishWordLabel.topAnchor.constraint(equalTo: englishWordLabel.bottomAnchor, constant: 2*GameViewConstant.padding)
         
         NSLayoutConstraint.activate([
             spanishWordLabelTopConstraint,
-            spanishWordLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 8),
-            spanishWordLabel.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -8)
+            spanishWordLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: GameViewConstant.padding),
+            spanishWordLabel.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -GameViewConstant.padding)
         ])
         
     }
@@ -124,10 +124,10 @@ extension GameViewController {
         buttonStackView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(buttonStackView)
         NSLayoutConstraint.activate([
-            buttonStackView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 8),
-            buttonStackView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -8),
-            buttonStackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -16),
-            buttonStackView.heightAnchor.constraint(equalToConstant: 40)
+            buttonStackView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: GameViewConstant.padding),
+            buttonStackView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -GameViewConstant.padding),
+            buttonStackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -GameViewConstant.mediumPadding),
+            buttonStackView.heightAnchor.constraint(equalToConstant: GameViewConstant.stackViewHeight)
         ])
         addButtonsInStack()
     }
@@ -182,7 +182,7 @@ extension GameViewController {
     
     private func animateSpanishWord(with duration: TimeInterval = 5.0) {
         spanishWordLabel.layer.removeAllAnimations()
-        self.spanishWordLabelTopConstraint?.constant = 12
+        self.spanishWordLabelTopConstraint?.constant = GameViewConstant.mediumPadding
         view.layoutIfNeeded()
         let animationShift = buttonStackView.frame.origin.y - spanishWordLabel.frame.origin.y
         spanishWordLabel.alpha = 1

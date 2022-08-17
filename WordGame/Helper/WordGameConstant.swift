@@ -21,6 +21,10 @@ extension GameViewController {
         static let restart = "Restart"
         static let correct = "Correct"
         static let wrong = "Wrong"
+        static let padding = 8.0
+        static let mediumPadding = 2*padding
+        static let largePadding = 3*padding
+        static let stackViewHeight = 40.0
     }
 }
 
