@@ -82,7 +82,9 @@ extension GameViewModel {
     }
     
     func startGame() {
-        self.nextQuestion()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) { // Call method with delay because GameViewController safeAreaLayoutGuide not updating.
+            self.nextQuestion()
+        }
     }
     
     func nextQuestion() {
@@ -101,7 +103,7 @@ extension GameViewModel {
     
     func result() {
         print("GameEnd")
-        print(gameManager.description)
+        print(gameManager.gameScore.description)
         delegate?.displayResult(gameScore: gameManager.gameScore)
         resetGameManager()
     }
@@ -144,7 +146,7 @@ extension GameViewModel {
     }
     
     fileprivate func rightAnswerCalculation() {
-        if currentWord.isTranslationCorrect == true {
+        if currentWord.isTranslationCorrect {
             gameManager.gameScore.correctAnswer += 1
         } else if currentWord.isTranslationCorrect == false {
             gameManager.gameScore.wrongAnswer += 1
@@ -154,7 +156,7 @@ extension GameViewModel {
     fileprivate func wrongAnswerCalculation() {
         if currentWord.isTranslationCorrect == false {
             gameManager.gameScore.correctAnswer += 1
-        } else if currentWord.isTranslationCorrect == true {
+        } else if currentWord.isTranslationCorrect {
             gameManager.gameScore.wrongAnswer += 1
         }
     }

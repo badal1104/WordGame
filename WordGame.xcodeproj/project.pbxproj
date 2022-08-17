@@ -121,7 +121,6 @@
 			children = (
 				A9030C982895348900E5E40D /* AppDelegate.swift */,
 				A9030C9A2895348900E5E40D /* SceneDelegate.swift */,
-				A99FA74D289995B400103ADD /* WordGameConstant.swift */,
 				A9FDDB1D289C54A800E17D7F /* WordGameError.swift */,
 				A9FDDB1C289C4C2600E17D7F /* Helper */,
 				A99FA74F289995C700103ADD /* ViewController */,
@@ -200,6 +199,7 @@
 		A9FDDB1C289C4C2600E17D7F /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				A99FA74D289995B400103ADD /* WordGameConstant.swift */,
 				A9FDDB1A289C4C1600E17D7F /* GameManager.swift */,
 			);
 			path = Helper;

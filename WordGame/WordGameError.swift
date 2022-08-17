@@ -14,15 +14,14 @@ enum WordGameError: Error {
     case other(message: String)
     
     var localizedDescription: String {
-        var message: String = "Something went wrong, please try again later"
-        
+        var message: String = WordGameError.generalMessage
         switch self {
         case .unableToReadFile:
-            message = "Problem in reading file, please validate it."
+            message = WordGameError.unableToReadFileMessage
         case .corruptData:
-            message = "Empty response data"
+            message = WordGameError.corruptDataMessage
         case .decodingFail:
-            message = "Unable to decode response object"
+            message = WordGameError.decodingFailMessage
         case let .other(errorMessage):
             message = errorMessage
         }
